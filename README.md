@@ -17,7 +17,7 @@ Edit the files and push to `main`. GitHub Pages republishes within a minute or t
   contact detail, change it there too, and update `dateModified`.
 - Colours: `--accent` (#B84900) is the orange for text and anything behind text, chosen to pass
   the WCAG AA contrast check on every background the page uses; `--orange` (#F96302) is kept for
-  decoration only. The light grey `--ink-soft` (#999999) still fails that check for small text.
+  decoration only. The grey for secondary text, `--ink-soft`, is #666666 (was #999999), which also passes.
 - `style.css` holds all the styling. The responsive rules are at the end of the file (breakpoints
   at 1100, 960, 900, 600 and 380 px), followed by the `prefers-reduced-motion` block.
 - `script.js` is loaded with `defer`, so nothing blocks rendering. It adds the fade-in on scroll,
