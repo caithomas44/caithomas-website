@@ -11,20 +11,35 @@ Edit the files and push to `main`. GitHub Pages republishes within a minute or t
 
 - `index.html` is the whole page. The `<head>` repeats facts from the page for search engines, AI
   assistants and social previews: Open Graph and X tags, and a JSON-LD block (`ProfilePage`,
-  `WebSite`, `ImageObject` and a `Person` with the job, employer, Bath, the email address, the
+  `WebSite`, `ImageObject` and a `Person` with the job, employer, Bath, the
   LinkedIn and Instagram profiles, every role in the career timeline as an `EmployeeRole`, and the
   two volunteer roles as `OrganizationRole`s). When the page text changes a role, a date or a
   contact detail, change it there too, and update `dateModified`.
 - `style.css` holds all the styling. The responsive rules are at the end of the file (breakpoints
   at 1100, 960, 900, 600 and 380 px), followed by the `prefers-reduced-motion` block.
 - `script.js` is loaded with `defer`, so nothing blocks rendering. It adds the fade-in on scroll,
-  the burger menu, the client-logo tabs, the Google Tag Manager click events and the cookie notice.
-  The page is complete without it: the fade-in only applies when the `js` class is on `<html>`.
+  the burger menu, the client-logo tabs, the cookie notice, Google Tag Manager and its click
+  events, and the email link. The page is complete without it: the fade-in only applies when the
+  `js` class is on `<html>`.
+- **Consent.** Google Tag Manager is not in the HTML. `script.js` loads it only after the visitor
+  presses "Accept all" (or on later visits once they have), with Google Consent Mode defaults set
+  to denied before that. "Reject all" stores the refusal, deletes the trackers' first-party
+  cookies and reloads the page if they were already running. "Cookie settings" in the footer
+  reopens the notice. Click events reach the dataLayer only after consent.
+- **Email.** The address is not in the page source. The contact link carries it reversed in two
+  data attributes and `script.js` builds the `mailto:` link; with scripts off it reads
+  "mail [at] caithomas.com". It is deliberately left out of the structured data.
 - `images/social-share.jpg` (1200×630) is the picture shown when the site is shared on LinkedIn,
   WhatsApp, Facebook or X. After changing it, re-scrape the page in LinkedIn's Post Inspector and
   Facebook's Sharing Debugger so they stop showing the old one.
 - Client logos live in `images/logos/` (they used to be hot-linked from wearecrank.com).
-- Analytics is Google Tag Manager container `GTM-KKZ54J`, unchanged from the old site.
+- Analytics is Google Tag Manager container `GTM-KKZ54J`. On 22 October 2026 it held GA4
+  (G-VH8NCC8951), the Meta Pixel, Microsoft Clarity, a dead GoDaddy Site Apps script, Bing and
+  Google verification tags injected by script, and Google Optimize's anti-flicker snippet. That
+  snippet hides the whole page for four seconds waiting for Optimize, which Google shut down in
+  2023; `html.async-hide { opacity: 1 !important; }` at the end of `style.css` cancels it. Remove
+  the snippet, the Site Apps tag and the verification tags in Tag Manager when convenient; the CSS
+  rule can stay.
 
 ## Checks before pushing
 
@@ -33,6 +48,9 @@ Edit the files and push to `main`. GitHub Pages republishes within a minute or t
 - HTML: https://validator.w3.org/nu/?out=json with the page as the request body.
 - Layout: look at the page at 360, 375, 768, 1024 and 1366 px wide; there should be no horizontal
   scrolling and nothing hidden when scripts are off.
+- Consent: on a first visit nothing from googletagmanager.com, google-analytics.com,
+  facebook.net or clarity.ms may load before "Accept all" is pressed, and nothing after "Reject
+  all".
 
 ## Hosting and DNS
 

@@ -1058,3 +1058,21 @@ img { height: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* Tag Manager still holds Google Optimize's anti-flicker snippet, which hides the page
+   (.async-hide { opacity: 0 !important }) for up to four seconds waiting for Optimize,
+   a product Google shut down in 2023. This more specific rule keeps the page visible. */
+html.async-hide { opacity: 1 !important; }
+
+.footer-cookie-link {
+  background: none;
+  border: 0;
+  padding: 0.5rem 0;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.footer-cookie-link:hover { color: rgba(255,255,255,0.9); }

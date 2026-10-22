@@ -31,13 +31,7 @@
   <meta name="theme-color" content="#fdfbf8">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KKZ54J');</script>
-  <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager (GTM-KKZ54J) is loaded by script.js, and only after the visitor accepts cookies. -->
 
   <!-- Async Google Fonts to prevent render blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,7 +97,6 @@
       },
       "jobTitle": "Head of Marketing Technology",
       "description": "Data-driven marketer and strategist with over 18 years of experience across B2B and B2C marketing, specialising in performance strategy, marketing technology and paid media across Meta, Google and LinkedIn.",
-      "email": "mailto:mail@caithomas.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Bath",
@@ -286,10 +279,6 @@
   </script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKZ54J"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <!-- NAV -->
   <nav id="navbar" aria-label="Main">
@@ -836,7 +825,7 @@
       <div class="contact-links reveal">
         <div class="contact-link-item">
           <div class="contact-link-label">Email</div>
-          <a href="mailto:mail@caithomas.com" class="contact-link-value">mail@caithomas.com</a>
+          <a href="#contact" class="contact-link-value js-email" data-u="liam" data-d="moc.samohtiac">mail [at] caithomas.com</a>
           <span class="contact-consent">⚠ This email is published for genuine human contact only. It may not be harvested, scraped, or used for unsolicited marketing — including outreach based on "legitimate interest". Any such use is explicitly prohibited under UK GDPR Article 21.</span>
         </div>
         <div class="contact-link-item">
@@ -868,7 +857,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
       </a>
     </div>
-    <p>caithomas.com</p>
+    <p>caithomas.com · <button type="button" class="footer-cookie-link" id="cookieSettings">Cookie settings</button></p>
   </footer>
 
 
@@ -876,11 +865,11 @@
   <div id="cookieConsent" class="cookie-overlay" role="dialog" aria-modal="true" aria-labelledby="cookieTitle" aria-describedby="cookieText">
     <div class="cookie-modal">
       <div class="cookie-icon">🍪</div>
-      <h2 class="cookie-title" id="cookieTitle">We value your privacy</h2>
-      <p class="cookie-text" id="cookieText">This website uses cookies and analytics to improve your experience and help us understand how visitors interact with our content. By continuing, you consent to our use of cookies and tracking technologies.</p>
+      <h2 class="cookie-title" id="cookieTitle">Cookies on this site</h2>
+      <p class="cookie-text" id="cookieText">With your permission this site uses analytics cookies (Google Analytics and Microsoft Clarity) to see how the page is used, and advertising cookies (Meta). Nothing is set unless you accept. You can change your choice at any time from the link at the bottom of the page.</p>
       <div class="cookie-buttons">
-        <button id="cookieAccept" class="cookie-btn cookie-btn-accept">Accept & Continue</button>
-        <button id="cookieReject" class="cookie-btn cookie-btn-reject">Go Back</button>
+        <button type="button" id="cookieAccept" class="cookie-btn cookie-btn-accept">Accept all</button>
+        <button type="button" id="cookieReject" class="cookie-btn cookie-btn-reject">Reject all</button>
       </div>
       <p class="cookie-footer">Read our <a href="#" class="cookie-link">Privacy Policy</a></p>
     </div>
