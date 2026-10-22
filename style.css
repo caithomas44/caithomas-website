@@ -638,8 +638,9 @@ section { padding: 7rem 4rem; }
 .timeline-link-whatsapp:hover { border-color: #25d366; color: #1a5e1a; }
 .timeline-link-linkedin { border-color: #b3d4f1; color: #0A66C2; }
 .timeline-link-linkedin:hover { background: #f0f7fd; border-color: #0A66C2; }
-.timeline-link-closed { opacity: 0.6; }
-.timeline-link-closed:hover { opacity: 0.8; }
+/* Links to closed businesses: a dashed border marks them, instead of fading the text below readable contrast. */
+.timeline-link-closed { color: var(--ink-soft); border-style: dashed; }
+.timeline-link-closed:hover { color: var(--accent); }
 
 .timeline-status-badge {
   display: inline-flex;
