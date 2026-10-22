@@ -145,7 +145,7 @@
   const accept = document.getElementById('cookieAccept');
   const reject = document.getElementById('cookieReject');
   const settings = document.getElementById('cookieSettings');
-  function showBanner() { banner.style.display = ''; banner.classList.add('show'); accept.focus({ preventScroll: true }); }
+  function showBanner(takeFocus) { banner.style.display = ''; banner.classList.add('show'); if (takeFocus) accept.focus({ preventScroll: true }); }
   function hideBanner() { banner.classList.remove('show'); setTimeout(() => { banner.style.display = 'none'; }, 300); }
 
   accept.addEventListener('click', function () {
@@ -164,11 +164,11 @@
     // Trackers already running in this page cannot be unloaded, so start the page afresh without them.
     if (wasLoaded) setTimeout(() => location.reload(), 350);
   });
-  if (settings) settings.addEventListener('click', showBanner);
+  if (settings) settings.addEventListener('click', () => showBanner(true));
 
   const choice = readChoice();
   if (choice === 'accepted') loadGTM();
-  else if (choice !== 'rejected') setTimeout(showBanner, 500);
+  else if (choice !== 'rejected') setTimeout(() => showBanner(false), 500);
 })();
 
 // Email address, put together in the browser so it is not in the page source for scrapers.

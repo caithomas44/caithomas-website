@@ -15,6 +15,9 @@ Edit the files and push to `main`. GitHub Pages republishes within a minute or t
   LinkedIn and Instagram profiles, every role in the career timeline as an `EmployeeRole`, and the
   two volunteer roles as `OrganizationRole`s). When the page text changes a role, a date or a
   contact detail, change it there too, and update `dateModified`.
+- Colours: `--accent` (#B84900) is the orange for text and anything behind text, chosen to pass
+  the WCAG AA contrast check on every background the page uses; `--orange` (#F96302) is kept for
+  decoration only. The light grey `--ink-soft` (#999999) still fails that check for small text.
 - `style.css` holds all the styling. The responsive rules are at the end of the file (breakpoints
   at 1100, 960, 900, 600 and 380 px), followed by the `prefers-reduced-motion` block.
 - `script.js` is loaded with `defer`, so nothing blocks rendering. It adds the fade-in on scroll,
@@ -25,7 +28,12 @@ Edit the files and push to `main`. GitHub Pages republishes within a minute or t
   presses "Accept all" (or on later visits once they have), with Google Consent Mode defaults set
   to denied before that. "Reject all" stores the refusal, deletes the trackers' first-party
   cookies and reloads the page if they were already running. "Cookie settings" in the footer
-  reopens the notice. Click events reach the dataLayer only after consent.
+  reopens the notice. Click events reach the dataLayer only after consent. The notice is a bar
+  along the bottom of the screen and links to `privacy.html`, the privacy and cookies page.
+- `privacy.html` describes exactly what the site loads. If a tag is added to or removed from Tag
+  Manager, or a retention setting changes, change that page and the cookie notice's wording too.
+- The Google and Bing verification tags are in the page's `<head>`, not in Tag Manager, so they
+  work for verification crawlers whatever the cookie choice.
 - **Email.** The address is not in the page source. The contact link carries it reversed in two
   data attributes and `script.js` builds the `mailto:` link; with scripts off it reads
   "mail [at] caithomas.com". It is deliberately left out of the structured data.
@@ -89,6 +97,7 @@ the web records are DNS only.
 
 ## Other files
 
+- `privacy.html` is the privacy and cookies page.
 - `404.html` is shown for any address that does not exist.
 - `robots.txt`, `sitemap.xml` and `site.webmanifest` are what they say.
 - `favicon.ico` sits at the root because browsers ask for it there; the other icons are in `images/`.
