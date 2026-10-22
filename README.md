@@ -39,6 +39,9 @@ Edit the files and push to `main`. GitHub Pages republishes within a minute or t
 - GitHub Pages, custom domain `www.caithomas.com` (the `CNAME` file), HTTPS enforced.
   `caithomas.com` redirects to `www`.
 - `.nojekyll` tells GitHub Pages to publish the files as they are.
+- The certificate is GitHub's (Let's Encrypt), first issued 22 October 2026 for both names and
+  renewed by GitHub. It was only issued after the custom domain was cleared and set again once DNS
+  pointed at GitHub; do the same if the certificate ever gets stuck.
 - The domain's DNS is in Cloudflare (Cai's own account, "Mail@caithomas.com's Account"), reached
   through the Cloudflare dashboard. The web records are DNS-only (grey cloud) so that GitHub can
   issue the certificate. Mail records (Google Workspace MX, SPF, the `mail` CNAME) are untouched.
@@ -50,6 +53,21 @@ Edit the files and push to `main`. GitHub Pages republishes within a minute or t
 | @    | A     | 185.199.110.153 | DNS only |
 | @    | A     | 185.199.111.153 | DNS only |
 | www  | CNAME | caithomas44.github.io | DNS only |
+
+## Before the move, and rollback
+
+Until 22 October 2026 www.caithomas.com was a Workers custom domain on the Cloudflare Worker
+`proud-flower-8fd3` (static assets, deployed 20 February 2026), in the same Cloudflare account. The
+bare domain had no record at all. The Worker was detached from www, not deleted, and is still
+reachable on its workers.dev address. To roll back: delete the `www` CNAME and the four `@` A
+records in Cloudflare, then add `www.caithomas.com` back as a custom domain on that Worker
+(Workers & Pages → proud-flower-8fd3 → Settings → Domains & Routes).
+
+Left as they were in Cloudflare, and not part of this site: a proxied wildcard `*.caithomas.com`
+pointing at the placeholder 192.0.2.1 (so any subdomain without its own record shows a Cloudflare
+error page), the Google Workspace records (`calendar`, `docs`, `mail`, `sites`, `start`), the
+SendGrid records, and two redirect rules (root to www, HTTP to HTTPS) that no longer fire because
+the web records are DNS only.
 
 ## Other files
 
