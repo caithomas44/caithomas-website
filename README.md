@@ -102,8 +102,22 @@ Removed from Cloudflare on 23 October 2026 (Cai's decision), recorded here so th
     go to `wildcard_replace(http.request.full_uri, r"http://*", r"https://${1}")`.
   Neither could fire once the web records became DNS only; GitHub Pages now does both redirects.
 
+Email records changed on 23 October 2026 (Cai no longer uses SendGrid; his decision):
+
+- SPF was `v=spf1 include:_spf.google.com include:sendgrid.net ~all`; it is now
+  `v=spf1 include:_spf.google.com ~all`. The SendGrid include let mail from any SendGrid customer
+  pass SPF as caithomas.com.
+- Removed CNAMEs: `sendgrid` → `u1869093.wl.sendgrid.net`, `s1._domainkey` →
+  `s1.domainkey.u1869093.wl.sendgrid.net`, `s2._domainkey` → `s2.domainkey.u1869093.wl.sendgrid.net`
+  (SendGrid no longer published a key there), and `tracking` → `smtp.caithomas.com` (no such name).
+- Added DMARC: `_dmarc` TXT `v=DMARC1; p=quarantine; rua=mailto:mail@caithomas.com`. Mail that
+  fails both SPF and DKIM alignment goes to spam, and receivers send daily aggregate reports to
+  mail@caithomas.com. Anything new that sends as @caithomas.com (a newsletter tool, a CRM) must
+  be added to SPF or set up with DKIM first, or its mail will land in spam.
+
 Left as they were: the Google Workspace records (`calendar`, `docs`, `mail`, `sites`, `start`),
-the SendGrid records and `tracking`, the mail records, and the two `_acme-challenge` TXT records.
+the MX records, Google's DKIM key (`google._domainkey`), the Google verification TXT, and the two
+`_acme-challenge` TXT records.
 
 ## Other files
 
