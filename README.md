@@ -89,11 +89,21 @@ reachable on its workers.dev address. To roll back: delete the `www` CNAME and t
 records in Cloudflare, then add `www.caithomas.com` back as a custom domain on that Worker
 (Workers & Pages → proud-flower-8fd3 → Settings → Domains & Routes).
 
-Left as they were in Cloudflare, and not part of this site: a proxied wildcard `*.caithomas.com`
-pointing at the placeholder 192.0.2.1 (so any subdomain without its own record shows a Cloudflare
-error page), the Google Workspace records (`calendar`, `docs`, `mail`, `sites`, `start`), the
-SendGrid records, and two redirect rules (root to www, HTTP to HTTPS) that no longer fire because
-the web records are DNS only.
+Removed from Cloudflare on 23 October 2026 (Cai's decision), recorded here so they can be recreated:
+
+- DNS: `A *.caithomas.com → 192.0.2.1`, proxied. The address is a placeholder, so every
+  subdomain without its own record showed a Cloudflare error page. Without it, unknown
+  subdomains don't resolve. `tracking.caithomas.com` is a CNAME to `smtp.caithomas.com`, which
+  has no record of its own; it only resolved through the wildcard, to that error page.
+- Redirect rules (Rules → Redirect Rules), both 301 without the query string:
+  - "Redirect from root to WWW [Template]": when `http.request.full_uri wildcard r"https://caithomas.com/*"`,
+    go to `wildcard_replace(http.request.full_uri, r"https://caithomas.com/*", r"https://www.caithomas.com/${1}")`.
+  - "Redirect from HTTP to HTTPS [Template]": when `http.request.full_uri wildcard r"http://*"`,
+    go to `wildcard_replace(http.request.full_uri, r"http://*", r"https://${1}")`.
+  Neither could fire once the web records became DNS only; GitHub Pages now does both redirects.
+
+Left as they were: the Google Workspace records (`calendar`, `docs`, `mail`, `sites`, `start`),
+the SendGrid records and `tracking`, the mail records, and the two `_acme-challenge` TXT records.
 
 ## Other files
 
