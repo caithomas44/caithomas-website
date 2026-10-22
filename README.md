@@ -113,14 +113,29 @@ Email records changed on 23 October 2026 (Cai no longer uses SendGrid; his decis
 - Removed CNAMEs: `sendgrid` → `u1869093.wl.sendgrid.net`, `s1._domainkey` →
   `s1.domainkey.u1869093.wl.sendgrid.net`, `s2._domainkey` → `s2.domainkey.u1869093.wl.sendgrid.net`
   (SendGrid no longer published a key there), and `tracking` → `smtp.caithomas.com` (no such name).
-- Added DMARC: `_dmarc` TXT `v=DMARC1; p=quarantine; rua=mailto:mail@caithomas.com`. Mail that
-  fails both SPF and DKIM alignment goes to spam, and receivers send daily aggregate reports to
-  mail@caithomas.com. Anything new that sends as @caithomas.com (a newsletter tool, a CRM) must
+- Added DMARC: `_dmarc` TXT `v=DMARC1; p=quarantine; rua=mailto:<id>@dmarc-reports.cloudflare.net`.
+  Mail that fails both SPF and DKIM alignment goes to spam. The daily aggregate reports go to
+  Cloudflare's DMARC Management (Email → DMARC Management in the dashboard), not to an inbox. Anything new that sends as @caithomas.com (a newsletter tool, a CRM) must
   be added to SPF or set up with DKIM first, or its mail will land in spam.
 
-Left as they were: the Google Workspace records (`calendar`, `docs`, `mail`, `sites`, `start`),
-the MX records, Google's DKIM key (`google._domainkey`), the Google verification TXT, and the two
-`_acme-challenge` TXT records.
+Mail and DNS hardening, 23 October 2026 (Cai's choices):
+
+- MTA-STS: `mta-sts` CNAME → `caithomas44.github.io` serves the policy from the repo
+  `caithomas44/caithomas-mta-sts`, and `_mta-sts` TXT `v=STSv1; id=20261023` announces it. The
+  policy is in testing mode; that repo's README says how to move to enforcement.
+- TLS reporting: `_smtp._tls` TXT `v=TLSRPTv1; rua=mailto:mail@caithomas.com`. Expect a few
+  JSON reports a day.
+- CAA on `caithomas.com`: `0 issue "letsencrypt.org"` (GitHub Pages) and
+  `0 iodef "mailto:mail@caithomas.com"`. Cloudflare adds its own certificate authorities to the
+  answers automatically while Universal SSL is on.
+- Removed `start` CNAME → `ghs.googlehosted.com` (Google's discontinued start page, a 404) and
+  two `_acme-challenge` TXT records left over from an old certificate check.
+
+Not done (Cai's decisions): the domain is registered at GoDaddy and expires on 10 December 2026;
+Cai is handling the renewal. DNSSEC is off. Google's DKIM key is 1024-bit.
+
+Left as they were: the Google Workspace shortcuts (`calendar`, `docs`, `mail`, `sites`), the MX
+records, Google's DKIM key (`google._domainkey`) and the Google verification TXT.
 
 ## Other files
 
