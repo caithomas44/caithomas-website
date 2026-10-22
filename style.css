@@ -638,9 +638,6 @@ section { padding: 7rem 4rem; }
 .timeline-link-whatsapp:hover { border-color: #25d366; color: #1a5e1a; }
 .timeline-link-linkedin { border-color: #b3d4f1; color: #0A66C2; }
 .timeline-link-linkedin:hover { background: #f0f7fd; border-color: #0A66C2; }
-/* Links to closed businesses: a dashed border marks them, instead of fading the text below readable contrast. */
-.timeline-link-closed { color: var(--ink-soft); border-style: dashed; }
-.timeline-link-closed:hover { color: var(--accent); }
 
 .timeline-status-badge {
   display: inline-flex;
@@ -1052,3 +1049,6 @@ html.async-hide { opacity: 1 !important; }
   cursor: pointer;
 }
 .footer-cookie-link:hover { color: #ffffff; }
+
+/* The headshot's <picture> wrapper must not get in the way of the image filling the circle. */
+.hero-avatar picture { display: contents; }

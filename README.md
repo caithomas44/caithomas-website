@@ -41,6 +41,9 @@ Edit the files and push to `main`. GitHub Pages republishes within a minute or t
   WhatsApp, Facebook or X. After changing it, re-scrape the page in LinkedIn's Post Inspector and
   Facebook's Sharing Debugger so they stop showing the old one.
 - Client logos live in `images/logos/` (they used to be hot-linked from wearecrank.com).
+- The headshot is served as `images/cai-thomas-headshot-480.webp` (480 px, shown at up to 240 px),
+  with `cai-thomas-headshot-480.jpg` as the fallback. The 800 px `cai-thomas-headshot.jpg` stays for
+  the structured data. Replace all three together.
 - Analytics is Google Tag Manager container `GTM-KKZ54J` (account "Cai Thomas Online Marketing").
   Since version 14 (23 October 2026) it holds three tags: GA4 (G-VH8NCC8951), the Meta Pixel and
   Microsoft Clarity. Version 14 removed Google Optimize's anti-flicker snippet (it hid the whole
