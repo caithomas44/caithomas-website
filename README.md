@@ -41,13 +41,13 @@ Edit the files and push to `main`. GitHub Pages republishes within a minute or t
   WhatsApp, Facebook or X. After changing it, re-scrape the page in LinkedIn's Post Inspector and
   Facebook's Sharing Debugger so they stop showing the old one.
 - Client logos live in `images/logos/` (they used to be hot-linked from wearecrank.com).
-- Analytics is Google Tag Manager container `GTM-KKZ54J`. On 22 October 2026 it held GA4
-  (G-VH8NCC8951), the Meta Pixel, Microsoft Clarity, a dead GoDaddy Site Apps script, Bing and
-  Google verification tags injected by script, and Google Optimize's anti-flicker snippet. That
-  snippet hides the whole page for four seconds waiting for Optimize, which Google shut down in
-  2023; `html.async-hide { opacity: 1 !important; }` at the end of `style.css` cancels it. Remove
-  the snippet, the Site Apps tag and the verification tags in Tag Manager when convenient; the CSS
-  rule can stay.
+- Analytics is Google Tag Manager container `GTM-KKZ54J` (account "Cai Thomas Online Marketing").
+  Since version 14 (23 October 2026) it holds three tags: GA4 (G-VH8NCC8951), the Meta Pixel and
+  Microsoft Clarity. Version 14 removed Google Optimize's anti-flicker snippet (it hid the whole
+  page for four seconds waiting for Optimize, which Google shut down in 2023), a dead GoDaddy Site
+  Apps script and four verification tags (now in the page's `<head>`). Version 13 has them all if
+  anything needs restoring. `html.async-hide { opacity: 1 !important; }` stays at the end of
+  `style.css` as a guard in case an anti-flicker snippet is ever added again.
 
 ## Checks before pushing
 
