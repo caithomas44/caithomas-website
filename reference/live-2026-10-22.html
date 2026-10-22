@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cai Thomas — Head of Marketing Technology</title>
+  <meta name="description" content="Cai Thomas — Head of Marketing Technology at We Are Crank. 18+ years driving performance marketing, paid media, and ecommerce growth across Meta, Google, and LinkedIn. Based in Bath, UK.">
+  <meta property="og:title" content="Cai Thomas — Head of Marketing Technology">
+  <meta property="og:description" content="18+ years driving performance marketing, paid media, and ecommerce growth. Head of Marketing Technology at We Are Crank. Based in Bath, UK.">
+  <meta property="og:url" content="https://caithomas.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://caithomas.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cai Thomas — Head of Marketing Technology">
+  <meta name="twitter:description" content="18+ years driving performance marketing, paid media, and ecommerce growth. Based in Bath, UK.">
+  <link rel="canonical" href="https://caithomas.com">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KKZ54J');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Async Google Fonts to prevent render blocking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"></noscript>
+  
+  <style>
+    /* Prevent white flash during load */
+    html { background-color: #fdfbf8; }
+    body { background-color: #fdfbf8; }
+    
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #1a1a1a;
+      --ink-mid:   #555555;
+      --ink-soft:  #999999;
+      --ink-faint: #e8e8e8;
+      --cream:     #f5f5f5;
+      --white:     #ffffff;
+      --orange:    #F96302;
+      --orange-dk: #d95200;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+    }
+    nav.scrolled { border-color: var(--ink-faint); }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+      position: relative;
+      z-index: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--orange); }
+
+    /* Burger */
+    .burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      position: relative;
+      z-index: 400;
+    }
+    .burger span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+      transform-origin: center;
+    }
+    .burger span:nth-child(2) { width: 70%; align-self: flex-end; }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile overlay */
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      z-index: 300;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-overlay.open { display: flex; }
+    .nav-overlay ul { list-style: none; width: 100%; text-align: center; }
+    .nav-overlay ul li { border-bottom: 1px solid var(--ink-faint); }
+    .nav-overlay ul li:first-child { border-top: 1px solid var(--ink-faint); }
+    .nav-overlay ul a {
+      display: block;
+      padding: 1.2rem 2rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-overlay ul a:hover { color: var(--orange); }
+
+    /* ── SHARED ── */
+    section { padding: 7rem 4rem; }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      max-width: 60px;
+      height: 1px;
+      background: #fdb57a;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.4rem;
+      background: var(--orange);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 500;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--orange-dk); transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1.35rem;
+      border: 1.5px solid var(--ink-mid);
+      color: var(--ink-mid);
+      font-size: 0.88rem;
+      font-weight: 500;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ── HERO ── */
+    #hero { 
+      padding: 62px 0 0; 
+      background: linear-gradient(to bottom, #fdfbf8 0%, #fff5eb 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-cover {
+      width: 100%;
+      height: 220px;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Abstract Paint Strokes Background - 2026 Design Trend */
+    #hero .paint-stroke-1 {
+      position: absolute;
+      top: 5%;
+      left: -5%;
+      width: 400px;
+      height: 300px;
+      background: linear-gradient(45deg, rgba(249, 99, 2, 0.6), rgba(255, 154, 74, 0.4));
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      filter: blur(40px);
+      opacity: 0.7;
+      animation: morphBlob 15s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    #hero .paint-stroke-2 {
+      position: absolute;
+      bottom: 10%;
+      right: -5%;
+      width: 500px;
+      height: 350px;
+      background: linear-gradient(-45deg, rgba(249, 99, 2, 0.5), rgba(255, 205, 140, 0.3));
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      filter: blur(50px);
+      opacity: 0.6;
+      animation: morphBlob 20s ease-in-out infinite reverse;
+      pointer-events: none;
+      z-index: 0;
+    }
+    #hero .paint-stroke-3 {
+      position: absolute;
+      top: 40%;
+      right: 20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 183, 77, 0.4) 0%, transparent 70%);
+      filter: blur(30px);
+      animation: float-gentle 12s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    @keyframes morphBlob {
+      0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+      25% { border-radius: 60% 40% 50% 50% / 30% 60% 40% 70%; }
+      50% { border-radius: 50% 60% 30% 70% / 50% 40% 60% 30%; }
+      75% { border-radius: 70% 30% 60% 40% / 60% 50% 30% 50%; }
+    }
+    @keyframes float-gentle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-30px); }
+    }
+    
+    .hero-cover::after {
+      content: none;
+    }
+
+    .hero-card-wrap { 
+      max-width: 900px; 
+      margin: 0 auto; 
+      padding: 0 2rem 3rem; 
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-profile-card {
+      background: var(--white);
+      border-radius: 0 0 8px 8px;
+      border: 1px solid var(--ink-faint);
+      border-top: none;
+      padding: 0 2.5rem 2.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.7s 0.2s forwards;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-avatar-wrap {
+      display: inline-block;
+      margin-top: -52px;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    .hero-avatar {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      border: 4px solid var(--white);
+      background: linear-gradient(135deg, #F96302, #d95200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      .hero-avatar {
+        width: 180px;
+        height: 180px;
+      }
+    }
+    .hero-badge {
+      position: absolute;
+      bottom: 4px; right: 4px;
+      width: 22px; height: 22px;
+      background: #0a66c2;
+      border-radius: 4px;
+      border: 2px solid var(--white);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-badge svg { width: 12px; height: 12px; fill: white; }
+
+    .hero-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 0.5rem;
+    }
+    .hero-identity { flex: 1; min-width: 0; }
+
+    .hero-name {
+      font-family: var(--sans);
+      font-size: 1.65rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.35s forwards;
+    }
+    .hero-title {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--ink-mid);
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.45s forwards;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 1.2rem;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.5s forwards;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .hero-meta a { color: #0a66c2; text-decoration: none; font-weight: 500; }
+    .hero-meta a:hover { text-decoration: underline; }
+
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+      align-self: flex-start;
+      padding-top: 0.25rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.6s forwards;
+    }
+
+    .hero-divider { border: none; border-top: 1px solid var(--ink-faint); margin: 1.5rem 0 1.2rem; }
+
+    .hero-stats-row {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.7s forwards;
+    }
+    .hero-stat { display: flex; flex-direction: column; }
+    .hero-stat-num { font-size: 1.1rem; font-weight: 500; color: var(--ink); }
+    .hero-stat-label { font-size: 0.75rem; color: var(--ink-soft); }
+
+    /* ── TECH STACK BLOCK - COMPACT WITH ICONS ── */
+    .tech-stack-block {
+      background: linear-gradient(135deg, var(--orange) 0%, #ff7a1f 100%);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.8s forwards;
+      box-shadow: 0 6px 20px rgba(249, 99, 2, 0.25);
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+    }
+    .tech-stack-block::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .tech-stack-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .tech-stack-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.15rem;
+    }
+    .tech-stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    
+    /* Icon tags for channels */
+    .tech-icon-tag {
+      width: 36px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .tech-icon-tag:hover {
+      background: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .tech-icon-tag svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    /* Text tags for tools */
+    .tech-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.7rem;
+      background: rgba(255, 255, 255, 0.95);
+      border: none;
+      border-radius: 16px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--orange);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      line-height: 1;
+    }
+    .tech-tag:hover {
+      background: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    .tech-tag-ai {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      color: var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .tech-tag-ai::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.3), transparent);
+      transition: left 0.5s;
+    }
+    .tech-tag-ai:hover::before {
+      left: 100%;
+    }
+    .tech-tag-ai:hover {
+      background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+      box-shadow: 0 4px 16px rgba(74, 144, 226, 0.3);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .tech-stack-block {
+        grid-template-columns: 1fr;
+        padding: 1rem 1.25rem;
+        gap: 0.85rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .tech-icon-tag {
+        width: 32px;
+        height: 32px;
+      }
+      .tech-icon-tag svg {
+        width: 18px;
+        height: 18px;
+      }
+      .tech-tag {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+      }
+    }
+
+
+    .hero-open-to {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f0faf0;
+      border: 1px solid #c5e8c5;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 0.82rem;
+      color: #2d6a2d;
+      margin-top: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.75s forwards;
+    }
+    .open-dot { width: 8px; height: 8px; background: #3ea83e; border-radius: 50%; flex-shrink: 0; }
+
+    .ai-design-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      background: #fff4e8;
+      border: 1px solid #fdd5a8;
+      border-radius: 8px;
+      padding: 0.9rem 1.2rem;
+      font-size: 0.82rem;
+      color: var(--ink);
+      line-height: 1.6;
+      margin-top: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.8s forwards;
+    }
+    .ai-design-note svg {
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+      color: #c45a00;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); border-top: 1px solid var(--ink-faint); border-bottom: 1px solid var(--ink-faint); }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 6rem; align-items: start; }
+
+    .about-heading { font-family: var(--serif); font-size: clamp(2.4rem, 4vw, 3.8rem); font-weight: 300; line-height: 1.1; color: var(--ink); }
+    .about-heading em { font-style: italic; color: var(--ink-mid); }
+
+    .about-body p { font-size: 1rem; font-weight: 300; color: var(--ink-mid); line-height: 1.85; margin-bottom: 1.4rem; }
+
+    .about-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem; }
+    .tag { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; border: 1px solid var(--ink-faint); color: var(--ink-mid); transition: border-color 0.2s, color 0.2s; }
+    .tag:hover { border-color: var(--orange); color: var(--ink); }
+
+    /* ── STATS ── */
+    #stats { background: var(--cream); }
+
+    .stats-intro { max-width: 600px; margin-bottom: 4rem; }
+    .stats-intro h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.15; margin-bottom: 1rem; }
+    .stats-intro p { font-size: 0.95rem; font-weight: 300; color: var(--ink-mid); line-height: 1.75; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--ink-faint); }
+    .stat-card { padding: 2.5rem 2rem; border-right: 1px solid var(--ink-faint); transition: background 0.25s; }
+    .stat-card:last-child { border-right: none; }
+    .stat-card:hover { background: var(--white); }
+    .stat-number { font-family: var(--serif); font-size: 3.2rem; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.4rem; }
+    .stat-suffix { font-size: 1.5rem; color: var(--orange); }
+    .stat-label { font-size: 0.8rem; color: var(--ink-mid); line-height: 1.5; margin-top: 0.5rem; }
+
+    .results-list { margin-top: 4rem; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink-faint); }
+    .result-item { padding: 1.6rem 2rem; border-bottom: 1px solid var(--ink-faint); border-right: 1px solid var(--ink-faint); display: flex; gap: 1rem; align-items: flex-start; transition: background 0.2s; }
+    .result-item:hover { background: var(--white); }
+    .result-item:nth-child(2n) { border-right: none; }
+    .result-item:nth-last-child(-n+2) { border-bottom: none; }
+    .result-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); margin-top: 0.5rem; flex-shrink: 0; }
+    .result-text { font-size: 0.88rem; font-weight: 300; color: var(--ink-mid); line-height: 1.65; }
+    .result-text strong { color: var(--ink); font-weight: 500; }
+
+    /* ── EXPERIENCE ── */
+    #experience { background: var(--white); }
+
+    .exp-heading { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; margin-bottom: 4rem; }
+
+    .timeline { border-left: 1px solid var(--ink-faint); margin-left: 1rem; }
+    .timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 3rem; padding: 2.5rem 0 2.5rem 3rem; border-bottom: 1px solid var(--ink-faint); position: relative; }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-item::before { content: ''; position: absolute; left: -5px; top: 3rem; width: 9px; height: 9px; border-radius: 50%; background: var(--white); border: 1.5px solid var(--orange); transition: background 0.2s; }
+    .timeline-item:hover::before { background: var(--orange); }
+    .timeline-period { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--orange); margin-bottom: 0.4rem; }
+    .timeline-company { font-size: 0.8rem; color: var(--ink-soft); font-weight: 300; }
+    .timeline-role { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; line-height: 1.2; margin-bottom: 0.8rem; }
+    .timeline-desc { font-size: 0.88rem; font-weight: 300; color: var(--ink-mid); line-height: 1.75; max-width: 620px; }
+
+    .timeline-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .timeline-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      text-decoration: none;
+      border: 1.5px solid var(--ink-faint);
+      color: var(--ink-mid);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .timeline-link:hover { border-color: var(--orange); color: var(--orange); }
+    .timeline-link-whatsapp { border-color: #c5e8c0; color: #2d7a2d; }
+    .timeline-link-whatsapp:hover { border-color: #25d366; color: #1a5e1a; }
+    .timeline-link-linkedin { border-color: #b3d4f1; color: #0A66C2; }
+    .timeline-link-linkedin:hover { background: #f0f7fd; border-color: #0A66C2; }
+    .timeline-link-closed { opacity: 0.6; }
+    .timeline-link-closed:hover { opacity: 0.8; }
+
+    .timeline-status-badge {
+      display: inline-flex;
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 0.2rem 0.7rem;
+      background: var(--ink-faint);
+      color: var(--ink-soft);
+      border-radius: 12px;
+      margin-left: 0.5rem;
+      font-family: var(--sans);
+      letter-spacing: 0.04em;
+    }
+    .timeline-status-sold {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .timeline-status-volunteer {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+    .timeline-status-active {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .timeline-status-active {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .timeline-status-volunteer {
+      background: #fff4e8;
+      color: #c45a00;
+    }
+
+    /* ── CLIENT TICKER ── */
+    .client-ticker-wrap {
+      margin-top: 1.5rem;
+      max-width: 620px;
+    }
+    .ticker-label {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .ticker-tab {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.8rem;
+      border-radius: 20px;
+      border: 1.5px solid var(--ink-faint);
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+    }
+    .ticker-tab.active {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+    }
+    .ticker-tab:hover:not(.active) { border-color: var(--orange); color: var(--orange); }
+
+    .ticker-track-outer {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--ink-faint);
+      border-radius: 6px;
+      background: var(--white);
+      height: 50px;
+    }
+    .ticker-track {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      white-space: nowrap;
+    }
+    .ticker-inner {
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      gap: 2rem;
+      padding: 0 1rem;
+      animation: tickerScroll 45s linear infinite;
+    }
+    .ticker-inner img {
+      height: 32px;
+      width: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .ticker-fade-left,
+    .ticker-fade-right {
+      position: absolute;
+      top: 0;
+      width: 60px;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .ticker-fade-left  { left: 0;  background: linear-gradient(to right, var(--white), transparent); }
+    .ticker-fade-right { right: 0; background: linear-gradient(to left,  var(--white), transparent); }
+
+    @keyframes tickerScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── PROJECT SECTIONS (Oakhill + Genealogy) ── */
+    .project-section { background: var(--white); border-top: 1px solid var(--ink-faint); }
+    .project-section.alt { background: var(--cream); }
+
+    .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+
+    .project-heading { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 300; line-height: 1.05; color: var(--ink); margin-bottom: 1.5rem; }
+    .project-heading em { font-style: italic; color: var(--ink-mid); }
+
+    .project-meta { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.8rem; }
+    .project-meta-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; color: var(--ink-mid); font-weight: 300; }
+
+    .project-desc { font-size: 0.95rem; font-weight: 300; color: var(--ink-mid); line-height: 1.85; margin-bottom: 1.2rem; max-width: 480px; }
+    .project-desc strong { color: var(--ink); font-weight: 500; }
+
+    .project-cta { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.8rem; padding: 0.65rem 1.5rem; background: var(--orange); color: var(--white); font-size: 0.88rem; font-weight: 500; border-radius: 20px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .project-cta:hover { background: var(--orange-dk); transform: translateY(-1px); }
+
+    .project-card { background: var(--white); border: 1px solid var(--ink-faint); border-radius: 12px; padding: 2rem; position: relative; overflow: hidden; }
+    .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(to right, var(--orange), var(--orange-dk)); }
+
+    .project-card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.8rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--ink-faint); }
+    .project-icon { font-size: 2.2rem; }
+    .project-card-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--ink); }
+    .project-card-sub { font-size: 0.78rem; color: var(--ink-soft); margin-top: 0.15rem; }
+
+    .project-facts { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
+    .project-fact { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+    .project-fact-label { color: var(--ink-soft); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; }
+    .project-fact-value { color: var(--ink); font-weight: 400; }
+    .project-fact-value a { color: var(--orange); text-decoration: none; font-weight: 500; }
+    .project-fact-value a:hover { text-decoration: underline; }
+
+    .status-badge { display: inline-flex; align-items: center; gap: 0.3rem; background: #fff4e8; color: #c45a00; border: 1px solid #fdd5a8; border-radius: 20px; padding: 0.2rem 0.8rem; font-size: 0.75rem; font-weight: 500; }
+
+    .project-quote { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--ink-mid); line-height: 1.6; padding-top: 1.5rem; border-top: 1px solid var(--ink-faint); }
+
+    .surnames-block { padding-top: 1.5rem; border-top: 1px solid var(--ink-faint); margin-top: 1.5rem; }
+    .surnames-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.75rem; }
+    .surnames-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .surname-tag { font-size: 0.78rem; font-weight: 500; padding: 0.3rem 0.85rem; background: var(--white); border: 1.5px solid var(--orange); color: var(--orange); border-radius: 20px; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--orange); color: var(--white); }
+    #contact .section-label { color: rgba(255,255,255,0.75); }
+    #contact .section-label::after { background: rgba(255,255,255,0.3); }
+
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+
+    .contact-heading { font-family: var(--serif); font-size: clamp(2.4rem, 4.5vw, 4rem); font-weight: 300; line-height: 1.1; color: var(--white); }
+    .contact-heading em { font-style: italic; color: rgba(255,255,255,0.75); }
+    .contact-sub { font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.7); margin-top: 1.5rem; line-height: 1.75; }
+
+    .social-icons { display: flex; gap: 0.75rem; margin-top: 2rem; }
+    .social-icon { width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.85); text-decoration: none; transition: background 0.2s, border-color 0.2s; }
+    .social-icon svg { width: 17px; height: 17px; }
+    .social-icon:hover { background: rgba(255,255,255,0.15); border-color: white; color: white; }
+
+    .contact-links { display: flex; flex-direction: column; }
+    .contact-link-item { padding: 1.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); }
+    .contact-link-item:first-child { padding-top: 0; }
+    .contact-link-item:last-child { border-bottom: none; }
+    .contact-link-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.2rem; }
+    .contact-link-value { font-family: var(--serif); font-size: 1.35rem; font-weight: 300; color: var(--white); text-decoration: none; display: block; transition: opacity 0.2s; }
+    .contact-link-value:hover { opacity: 0.75; }
+    .contact-consent { display: block; font-size: 0.7rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-top: 0.35rem; font-style: italic; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--orange-dk); border-top: 1px solid rgba(255,255,255,0.15); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; }
+    footer p { font-size: 0.75rem; color: rgba(255,255,255,0.6); letter-spacing: 0.05em; }
+    .footer-socials { display: flex; gap: 1rem; align-items: center; }
+    .footer-social-link { color: rgba(255,255,255,0.5); text-decoration: none; display: flex; align-items: center; transition: color 0.2s; }
+    .footer-social-link:hover { color: rgba(255,255,255,0.9); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1.1rem 2rem; }
+      section { padding: 5rem 2rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-card:nth-child(2) { border-right: none; }
+      .stat-card:nth-child(3) { border-right: 1px solid var(--ink-faint); border-top: 1px solid var(--ink-faint); }
+      .stat-card:nth-child(4) { border-right: none; border-top: 1px solid var(--ink-faint); }
+      .results-list { grid-template-columns: 1fr; }
+      .result-item { border-right: none; }
+      .result-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--ink-faint); }
+      .result-item:last-child { border-bottom: none; }
+      .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .project-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .hero-cover { height: 160px; }
+      .hero-card-wrap { padding: 0 1rem 2.5rem; }
+      .hero-profile-card { padding: 0 1.5rem 2rem; }
+      .hero-top-row { flex-direction: column; }
+      .hero-stats-row { gap: 1.5rem; }
+      #hero { padding: 58px 0 0; }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .burger { display: flex; }
+    }
+
+    @media (max-width: 600px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats-row { flex-direction: column; gap: 1rem; }
+    }
+
+    /* ── COOKIE CONSENT BANNER ── */
+    .cookie-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(26, 26, 26, 0.96);
+      backdrop-filter: blur(12px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .cookie-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .cookie-modal {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      max-width: 540px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: slideUp 0.4s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .cookie-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.25rem;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .cookie-title {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .cookie-text {
+      font-size: 1rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .cookie-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-direction: column;
+    }
+    @media (min-width: 500px) {
+      .cookie-buttons { flex-direction: row; }
+    }
+    .cookie-btn {
+      flex: 1;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      border: none;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .cookie-btn-accept {
+      background: var(--orange);
+      color: var(--white);
+    }
+    .cookie-btn-accept:hover {
+      background: #e05802;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(249, 99, 2, 0.3);
+    }
+    .cookie-btn-reject {
+      background: transparent;
+      color: var(--ink);
+      border: 2px solid var(--ink-faint);
+    }
+    .cookie-btn-reject:hover {
+      background: var(--cream);
+      border-color: var(--ink-soft);
+    }
+    .cookie-footer {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+    }
+    .cookie-link {
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .cookie-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ── 2026 DESIGN ENHANCEMENTS ── */
+    /* Enhanced color system */
+    :root {
+      --orange-dark: #c74d00;
+      --orange-light: #ff7a1f;
+      --blue-accent: #4A90E2;
+      --green-accent: #2e7d32;
+    }
+    
+    /* Dynamic text treatment */
+    @keyframes textShimmer {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; }
+    }
+    .hero-name {
+      animation: textShimmer 3s ease-in-out infinite;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKZ54J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Cai Thomas</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#stats">Results</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#oakhill">Oakhill Cottage</a></li>
+      <li><a href="#genealogy">Family History</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="nav-overlay" id="nav-overlay">
+    <ul>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#stats" class="nav-link">Results</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#oakhill" class="nav-link">Oakhill Cottage</a></li>
+      <li><a href="#genealogy" class="nav-link">Family History</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <main id="main-content">
+  <section id="hero">
+    <!-- Abstract Paint Strokes Background -->
+    <div class="paint-stroke-1"></div>
+    <div class="paint-stroke-2"></div>
+    <div class="paint-stroke-3"></div>
+    
+    <div class="hero-cover"></div>
+    <div class="hero-card-wrap">
+      <div class="hero-profile-card">
+        <div class="hero-top-row">
+          <div class="hero-identity">
+            <div class="hero-avatar-wrap">
+              <div class="hero-avatar" style="background: none; padding: 0;">
+                <img src="/cai-thomas-headshot.jpg" alt="Cai Thomas - Head of Marketing Technology" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+              </div>
+              <div class="hero-badge">
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="white"/></svg>
+              </div>
+            </div>
+            <h1 class="hero-name">Cai Thomas</h1>
+            <p class="hero-title">Head of Marketing Technology at We Are Crank</p>
+            <div class="hero-meta">
+              <span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Bath, United Kingdom
+              </span>
+              <span>·</span>
+              <a href="https://www.linkedin.com/in/caithomas/" target="_blank">Connect on LinkedIn</a>
+            </div>
+          </div>
+          <div class="hero-cta-row">
+            <a href="https://www.linkedin.com/in/caithomas/" target="_blank" class="btn-primary">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              Get in touch
+            </a>
+            <a href="#experience" class="btn-ghost">View experience</a>
+          </div>
+        </div>
+        <hr class="hero-divider">
+        <div class="hero-stats-row">
+          <div class="hero-stat">
+            <span class="hero-stat-num">18+</span>
+            <span class="hero-stat-label">Years experience</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">268%</span>
+            <span class="hero-stat-label">Peak quarterly growth</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">219%</span>
+            <span class="hero-stat-label">Peak purchase growth</span>
+          </div>
+        </div>
+        
+        <!-- Tech Stack Block -->
+        <div class="tech-stack-block">
+          <div class="tech-stack-section">
+            <div class="tech-stack-label">Core channels</div>
+            <div class="tech-stack-tags">
+              <span class="tech-icon-tag" title="Meta">
+                <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </span>
+              <span class="tech-icon-tag" title="Google">
+                <svg viewBox="0 0 24 24" fill="#4285F4"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              </span>
+              <span class="tech-icon-tag" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </span>
+              <span class="tech-icon-tag" title="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </span>
+            </div>
+          </div>
+          <div class="tech-stack-section">
+            <div class="tech-stack-label">Tech stack</div>
+            <div class="tech-stack-tags">
+              <span class="tech-icon-tag" title="HubSpot">
+                <svg viewBox="0 0 24 24" fill="#FF7A59"><path d="M18.164 7.93V5.084a2.198 2.198 0 0 0 1.11-1.916A2.18 2.18 0 0 0 17.09.984a2.18 2.18 0 0 0-2.184 2.184c0 .838.47 1.556 1.163 1.916v2.846a5.264 5.264 0 0 0-2.726 1.304L8.73 6.308a2.883 2.883 0 0 0 .171-.861A2.768 2.768 0 0 0 6.138 2.7a2.768 2.768 0 0 0-2.763 2.763c0 1.041.597 1.944 1.462 2.388L3.31 11.769a3.514 3.514 0 0 0-1.757-.479A3.56 3.56 0 0 0 0 14.953a3.553 3.553 0 0 0 3.553 3.553c.865 0 1.644-.324 2.244-.855l5.11 3.61a3.797 3.797 0 0 0-.147 1.037A3.807 3.807 0 0 0 14.566 26a3.807 3.807 0 0 0 3.806-3.806c0-.609-.148-1.183-.405-1.695l3.382-2.957c.248.06.503.091.765.091A2.887 2.887 0 0 0 24 14.746a2.887 2.887 0 0 0-2.886-2.887 2.886 2.886 0 0 0-2.887 2.887c0 .628.205 1.209.547 1.681l-3.384 2.959a3.754 3.754 0 0 0-1.824-.726v-6.633a5.24 5.24 0 0 0 2.598-4.5V7.93z"/></svg>
+              </span>
+              <span class="tech-icon-tag" title="Salesforce">
+                <svg viewBox="0 0 24 24" fill="#00A1E0"><path d="M10.006 5.435a4.327 4.327 0 0 1 4.211-3.435c1.835 0 3.438 1.039 4.232 2.553a5.266 5.266 0 0 1 3.996 1.916 5.206 5.206 0 0 1 1.15 4.442 4.78 4.78 0 0 1 2.462 3.638c.262 1.866-.461 3.726-1.906 4.908a5.76 5.76 0 0 1-4.279 1.43 4.476 4.476 0 0 1-4.229 2.918 4.516 4.516 0 0 1-4.299-3.157 5.16 5.16 0 0 1-5.082-2.023 5.088 5.088 0 0 1-.927-4.448 4.68 4.68 0 0 1-1.596-2.927A4.677 4.677 0 0 1 4.81 6.711a5.245 5.245 0 0 1 5.196-1.276z"/></svg>
+              </span>
+              <span class="tech-icon-tag" title="Zapier">
+                <svg viewBox="0 0 24 24" fill="#FF4A00"><path d="M14.618 11.121h5.61L13.664 4.557v5.564zm-2.227-5.564-6.564 6.564h5.564V6.557zm-3.346 9.9-2.218 2.218 6.564 6.564v-5.564zm9.9 3.345 2.218-2.218-6.564-6.564v5.564zm-7.663-2.227H5.672l6.564 6.564v-5.564zm2.227 5.564 6.564-6.564h-5.564v5.564zm3.346-9.9 2.218-2.218-6.564-6.564v5.564zm-9.9-3.346-2.218 2.218 6.564 6.564v-5.564z"/></svg>
+              </span>
+              <span class="tech-icon-tag" title="Shopify">
+                <svg viewBox="0 0 24 24" fill="#96BF48"><path d="M15.337 2.367c-.066 0-.197.066-.328.066-.788.131-1.576.459-2.43.918-.197-.591-.525-1.312-1.051-1.902-.853-.918-2.036-1.378-3.153-1.312-3.022.197-4.139 3.613-4.533 5.45-1.051.328-1.838.59-1.903.656-.591.197-.656.262-.722.787-.066.394-1.641 12.718-1.641 12.718L14.878 24l8.297-1.837S16.388 2.367 15.337 2.367zm-3.874 1.575c-.328.131-.722.262-1.116.394.131-1.182.131-2.233-.066-2.889.591.197 1.051.918 1.182 2.495zm-1.838.656c-.853.262-1.772.525-2.692.853.262-1.116.788-2.233 1.51-2.889.197-.197.525-.459.853-.656.328.853.394 1.838.329 2.692zm-1.772-4.467c.262 0 .459.066.656.197-.328.197-.656.525-.918.853-.853.918-1.444 2.298-1.641 3.874-.722.197-1.444.394-2.101.591.525-2.036 2.036-5.384 4.004-5.515zM6.643 17.245c.066 1.051 5.253 1.312 5.515 7.63 0 0 3.874-.853 4.401-1.116.525-.262 5.318-13.178 5.318-13.178l-4.861-.722c-2.692 3.022-7.682 4.467-10.373 7.386z"/></svg>
+              </span>
+            </div>
+          </div>
+          <div class="tech-stack-section">
+            <div class="tech-stack-label">AI tools</div>
+            <div class="tech-stack-tags">
+              <span class="tech-icon-tag" title="Claude">
+                <svg viewBox="0 0 24 24" fill="#CC9B7A"><path d="M14.5 2.5h-5L4 12l5.5 9.5h5L20 12l-5.5-9.5zm-3.25 15l-3-5.5 3-5.5h1.5l3 5.5-3 5.5h-1.5z"/></svg>
+              </span>
+              <span class="tech-icon-tag" title="ChatGPT">
+                <svg viewBox="0 0 24 24" fill="#10A37F"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.230V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-open-to">
+          <div class="open-dot"></div>
+          Open to new client partnerships &amp; collaborations
+        </div>
+        <div class="ai-design-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          This website was designed by AI. Let me show you how we can help your marketing team effectively use AI.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label reveal">About</div>
+    <div class="about-grid">
+      <div class="reveal">
+        <h2 class="about-heading">Data-driven<br>marketer &amp;<br><em>strategist</em></h2>
+      </div>
+      <div class="about-body reveal">
+        <p>With over 18 years of experience across B2B and B2C marketing, I specialise in performance strategy, marketing technology, and paid media execution. Currently Head of Marketing Technology at <strong>We Are Crank</strong>, I help brands scale sustainably and profitably in competitive markets.</p>
+        <p>My background spans the full growth stack — from advanced conversion tracking and server-side data infrastructure to creative paid media strategy across Meta, Google, and LinkedIn. I've led cross-functional developer teams as CTO, rebuilt mobile platforms from scratch, and worked with ecommerce brands, high-growth startups, and businesses raising seed to Series D funding.</p>
+        <p>Away from screens, I serve as Treasurer for Farmborough Pre School and previously sat on Farmborough Parish Council — a reflection of my belief that good strategy, in any context, starts with understanding your community.</p>
+        <div class="about-tags">
+          <span class="tag">Meta Ads</span>
+          <span class="tag">Google Ads</span>
+          <span class="tag">LinkedIn Ads</span>
+          <span class="tag">Server-Side Tracking</span>
+          <span class="tag">eCommerce Growth</span>
+          <span class="tag">B2B Lead Gen</span>
+          <span class="tag">Marketing Strategy</span>
+          <span class="tag">CRO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="section-label reveal">Key Results</div>
+    <div class="stats-intro reveal">
+      <h2>Numbers that<br><em>speak for themselves</em></h2>
+      <p>A selection of outcomes delivered for clients across ecommerce, B2B, and high-growth startups.</p>
+    </div>
+    <div class="stats-grid reveal">
+      <div class="stat-card">
+        <div class="stat-number">219<span class="stat-suffix">%</span></div>
+        <div class="stat-label">Increase in purchase volume via Meta &amp; Google Ads (2025)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">268<span class="stat-suffix">%</span></div>
+        <div class="stat-label">Quarter-on-quarter growth for a startup skincare brand</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">76<span class="stat-suffix">%</span></div>
+        <div class="stat-label">YoY ecommerce conversion rate improvement (2025)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">157<span class="stat-suffix">%</span></div>
+        <div class="stat-label">Purchase growth for a global beauty brand (2025)</div>
+      </div>
+    </div>
+    <div class="results-list reveal">
+      <div class="result-item"><div class="result-dot"></div><p class="result-text"><strong>38% YoY growth</strong> and 157% purchase growth for a global beauty brand (2025)</p></div>
+      <div class="result-item"><div class="result-dot"></div><p class="result-text"><strong>149% YoY growth</strong> for a high-end makeup brand (2023–2024)</p></div>
+      <div class="result-item"><div class="result-dot"></div><p class="result-text"><strong>123% Black Friday sales growth</strong> for a luxury fashion brand (2024–2025)</p></div>
+      <div class="result-item"><div class="result-dot"></div><p class="result-text"><strong>1,000% ROI</strong> on implantology services for a national dental brand</p></div>
+      <div class="result-item"><div class="result-dot"></div><p class="result-text"><strong>300% growth</strong> in business turnover at Travelopo through strategic partnerships</p></div>
+      <div class="result-item"><div class="result-dot"></div><p class="result-text"><strong>700% growth</strong> in inbound partnerships, expanding a global travel supply network</p></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label reveal">Experience</div>
+    <h2 class="exp-heading reveal">Career timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2021 — Present</div><div class="timeline-company">We Are Crank</div></div>
+        <div>
+          <div class="timeline-role">Head of Marketing Technology <span class="timeline-status-badge timeline-status-active">Active role</span></div>
+          <p class="timeline-desc">Leading performance strategy, marketing technology, and paid media execution. Specialising in Meta, Google, and LinkedIn Ads — underpinned by enhanced conversion tracking and server-side data — to drive intelligent, profitable scaling for B2B and eCommerce brands.</p>
+          <div class="timeline-links">
+            <a href="https://wearecrank.com/" target="_blank" class="timeline-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              wearecrank.com
+            </a>
+            <a href="https://www.linkedin.com/company/wearecrank" target="_blank" class="timeline-link timeline-link-linkedin">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://wa.me/447457416922?text=Help%20my%20business" target="_blank" class="timeline-link timeline-link-whatsapp">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              WhatsApp Crank
+            </a>
+          </div>
+
+          <!-- Client logos ticker -->
+          <div class="client-ticker-wrap">
+            <div class="ticker-label">
+              <span class="ticker-tab active" data-group="b2b">B2B Clients</span>
+              <span class="ticker-tab" data-group="b2c">B2C Clients</span>
+            </div>
+            <div class="ticker-track-outer">
+              <div class="ticker-track" id="ticker-b2b">
+                <div class="ticker-inner">
+                  <img src="https://wearecrank.com/mitsubishi-chemical-logo-new.jpg" alt="Mitsubishi Chemical - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/amplience-logo-new.webp" alt="Amplience - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/boston-scientific-new.jpeg" alt="Boston Scientific - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/said-business-school-logo.png" alt="Saïd Business School - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/rayobyte-logo.png" alt="Rayobyte - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/samsung-logo.png" alt="Samsung - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/tata-communications-logo.png" alt="Tata Communications - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/integrated-finance-logo.png" alt="Integrated Finance - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/university-of-law-logo.png" alt="The University of Law - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/mitsubishi-chemical-logo-new.jpg" alt="Mitsubishi Chemical - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/amplience-logo-new.webp" alt="Amplience - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/boston-scientific-new.jpeg" alt="Boston Scientific - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/said-business-school-logo.png" alt="Saïd Business School - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/rayobyte-logo.png" alt="Rayobyte - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/samsung-logo.png" alt="Samsung - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/tata-communications-logo.png" alt="Tata Communications - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/integrated-finance-logo.png" alt="Integrated Finance - B2B client logo" loading="lazy">
+                  <img src="https://wearecrank.com/university-of-law-logo.png" alt="The University of Law - B2B client logo" loading="lazy">
+                </div>
+              </div>
+              <div class="ticker-track" id="ticker-b2c" style="display:none;">
+                <div class="ticker-inner">
+                  <img src="https://wearecrank.com/pentland-logo.png" alt="Pentland - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/audi-logo-new.png" alt="Audi - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/is-clinical-logo.png" alt="iS Clinical - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/liberty-london-logo.jpg" alt="Liberty London - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/parkdean-resorts-logo.png" alt="Parkdean Resorts - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/revitalash-logo.jpg" alt="RevitaLash Cosmetics - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/deesse-pro-logo.png" alt="Déesse Pro - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/get-the-label-logo.png" alt="Get The Label - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/lovell-sports-logo.png" alt="Lovell Sports - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/pentland-logo.png" alt="Pentland - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/audi-logo-new.png" alt="Audi - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/is-clinical-logo.png" alt="iS Clinical - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/liberty-london-logo.jpg" alt="Liberty London - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/parkdean-resorts-logo.png" alt="Parkdean Resorts - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/revitalash-logo.jpg" alt="RevitaLash Cosmetics - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/deesse-pro-logo.png" alt="Déesse Pro - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/get-the-label-logo.png" alt="Get The Label - B2C client logo" loading="lazy">
+                  <img src="https://wearecrank.com/lovell-sports-logo.png" alt="Lovell Sports - B2C client logo" loading="lazy">
+                </div>
+              </div>
+              <div class="ticker-fade-left"></div>
+              <div class="ticker-fade-right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- NEW: Treasurer Role -->
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2025 — Present</div><div class="timeline-company">Farmborough Pre School</div></div>
+        <div>
+          <div class="timeline-role">Treasurer <span class="timeline-status-badge timeline-status-active">Active role</span> <span class="timeline-status-badge timeline-status-volunteer">Volunteer non-profit role</span></div>
+          <p class="timeline-desc">Providing financial leadership and strategic oversight to support sustainable operations and enable quality early years education for local families.</p>
+          <div class="timeline-links">
+            <a href="https://www.farmboroughpreschool.com/" target="_blank" class="timeline-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              farmboroughpreschool.com
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2023</div><div class="timeline-company">Farmborough Parish Council</div></div>
+        <div>
+          <div class="timeline-role">Advisory Council Member <span class="timeline-status-badge timeline-status-volunteer">Volunteer non-profit role</span></div>
+          <p class="timeline-desc">Actively contributed to the wellbeing and development of the community. Collaborated with stakeholders to address concerns and drive positive change, evaluating planning applications and overseeing maintenance of parish facilities including the Village Hall, Recreation Ground, and children's playgrounds.</p>
+          <div class="timeline-links">
+            <a href="https://farmborough-pc.gov.uk/" target="_blank" class="timeline-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              farmborough-pc.gov.uk
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2023</div><div class="timeline-company">SwingHub</div></div>
+        <div>
+          <div class="timeline-role">Chief Marketing Officer</div>
+          <p class="timeline-desc">Founding member and dual CMO/CTO at a lifestyle app. Led full rebuild of iOS and Android platform in 6 months. Grew to 18,000 registered users within 3 months of launch through data-driven growth strategy and an influencer launch event reaching 10M+ followers.</p>
+          <div class="timeline-links">
+            <a href="https://swinghub.com" target="_blank" class="timeline-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              swinghub.com
+            </a>
+            <a href="https://www.linkedin.com/company/swinghub" target="_blank" class="timeline-link timeline-link-linkedin">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://apps.apple.com/gb/app/swinghub-open-dating-social/id6459476247" target="_blank" class="timeline-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+              App Store
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.swinghub.android&hl=en_GB" target="_blank" class="timeline-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/></svg>
+              Google Play
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2015 — 2021</div><div class="timeline-company">Travelopo</div></div>
+        <div>
+          <div class="timeline-role">Head of Marketing <span class="timeline-status-badge">Business Closed</span></div>
+          <p class="timeline-desc">Transformed the business from a property manager into a thriving OTA. Onboarded 700+ property suppliers, partnered with Booking.com, Airbnb, Expedia and more, and spearheaded 300% growth in business turnover. Led cross-functional teams across marketing, tech, operations, and finance.</p>
+          <div class="timeline-links">
+            <a href="https://www.travelopo.com" target="_blank" class="timeline-link timeline-link-closed">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              travelopo.com
+            </a>
+            <a href="https://www.linkedin.com/company/travelopo/" target="_blank" class="timeline-link timeline-link-linkedin">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2013 — 2015</div><div class="timeline-company">Cai Thomas Online Marketing</div></div>
+        <div>
+          <div class="timeline-role">Founder &amp; Marketing Consultant <span class="timeline-status-badge">Business Closed</span></div>
+          <p class="timeline-desc">Delivered bespoke paid advertising, SEO, UX, and social media services for luxury brands. Achieved first-page keyword rankings for all clients and a 1,000% ROI on implantology campaigns for a national dental group.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2013 — 2015</div><div class="timeline-company">All Your Life Group</div></div>
+        <div>
+          <div class="timeline-role">Head of Marketing <span class="timeline-status-badge">Business Closed</span></div>
+          <p class="timeline-desc">Played a pivotal role in expanding the spa and photography franchise network from a single location to 5 franchisees. Drove lead generation growth by over 8000% in 12 months through paid social, SEO, and affiliate marketing.</p>
+          <div class="timeline-links">
+            <a href="https://www.linkedin.com/company/all-your-life-ltd" target="_blank" class="timeline-link timeline-link-linkedin">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2011 — 2013</div><div class="timeline-company">Pcdial.com</div></div>
+        <div>
+          <div class="timeline-role">Managing Director</div>
+          <p class="timeline-desc">Co-founded and managed a highly successful remote computer support service. Within 12 months, expanded subscriber list to hundreds of recurring support subscribers through strategic PPC, SEO, SMM, and networking. Established partnerships with globally recognized security brands like F-Secure.</p>
+          <div class="timeline-links">
+            <a href="https://pcdial.com/" target="_blank" class="timeline-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              pcdial.com
+            </a>
+            <a href="https://www.linkedin.com/company/pcdial-com" target="_blank" class="timeline-link timeline-link-linkedin">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2009 — 2010</div><div class="timeline-company">Alternative Bathrooms</div></div>
+        <div>
+          <div class="timeline-role">Online Marketing Manager</div>
+          <p class="timeline-desc">Spearheaded the management and growth of a small online bathroom shop, transforming it into one of the UK's fastest-growing luxury bathroom websites. Led the company to achieve 550% growth in 9 months and expanded product range from 500 to 15,000 products.</p>
+          <div class="timeline-links">
+            <a href="https://www.alternativebathrooms.com/" target="_blank" class="timeline-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              alternativebathrooms.com
+            </a>
+            <a href="https://www.linkedin.com/company/alternative-bathrooms/" target="_blank" class="timeline-link timeline-link-linkedin">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2005 — 2009</div><div class="timeline-company">HSBC</div></div>
+        <div>
+          <div class="timeline-role">Customer Service Officer</div>
+          <p class="timeline-desc">Excelled in providing exceptional service and support to customers as a sales floor manager and frontline representative. Managed sales floor operations, handled cash transactions, and engaged in regulated account sales.</p>
+          <div class="timeline-links">
+            <a href="https://www.linkedin.com/company/hsbc/" target="_blank" class="timeline-link timeline-link-linkedin">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div><div class="timeline-period">2006 — 2007</div><div class="timeline-company">Skyline Solar UK</div></div>
+        <div>
+          <div class="timeline-role">Founder <span class="timeline-status-badge timeline-status-sold">Business Sold</span></div>
+          <p class="timeline-desc">Established and managed an ecommerce store specializing in solar panels and wind turbines. Generated 100% SEO-driven traffic and forged international partnerships for efficient drop shipping. Company sold due to academic constraints.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OAKHILL COTTAGE -->
+  <section id="oakhill" class="project-section">
+    <div class="section-label reveal">Personal Project</div>
+    <div class="project-grid">
+      <div class="reveal">
+        <h2 class="project-heading">Oakhill<br><em>Cottage</em></h2>
+        <div class="project-meta">
+          <div class="project-meta-item"><span>📌</span> 6 miles from Bath, Somerset</div>
+          <div class="project-meta-item"><span>🕰</span> Built circa 1747</div>
+        </div>
+        <p class="project-desc">Away from the world of marketing and technology, I've been undertaking a full renovation of Oakhill Cottage — a charming property dating back to 1747, located just 6 miles from the UNESCO World Heritage city of Bath. The project involves sympathetically restoring original period features while bringing the home up to modern standards.</p>
+        <p class="project-desc">It's a labour of love that demands patience, craft, and an eye for detail — qualities that translate surprisingly well to my professional work. Follow the journey on Instagram.</p>
+        <a href="https://www.instagram.com/oakhill.cottage" target="_blank" class="project-cta">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          Follow @oakhill.cottage
+        </a>
+      </div>
+      <div class="reveal">
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-icon">🏡</span>
+            <div>
+              <div class="project-card-title">Oakhill Cottage</div>
+              <div class="project-card-sub">Renovation in progress</div>
+            </div>
+          </div>
+          <div class="project-facts">
+            <div class="project-fact"><span class="project-fact-label">Location</span><span class="project-fact-value">6 miles from Bath</span></div>
+            <div class="project-fact"><span class="project-fact-label">Built</span><span class="project-fact-value">Circa 1747</span></div>
+            <div class="project-fact"><span class="project-fact-label">Status</span><span class="project-fact-value"><span class="status-badge">🔨 Active renovation</span></span></div>
+            <div class="project-fact"><span class="project-fact-label">Follow</span><span class="project-fact-value"><a href="https://www.instagram.com/oakhill.cottage" target="_blank">@oakhill.cottage</a></span></div>
+          </div>
+          <div class="project-quote">"Restoring a piece of English history, one room at a time."</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENEALOGY -->
+  <section id="genealogy" class="project-section alt">
+    <div class="section-label reveal">Personal Project</div>
+    <div class="project-grid">
+      <div class="reveal">
+        <h2 class="project-heading">Family<br><em>History</em></h2>
+        <div class="project-meta">
+          <div class="project-meta-item"><span>🌳</span> Genealogy &amp; Family Tree Research</div>
+          <div class="project-meta-item"><span>📜</span> Tracing roots across Wales, England &amp; Ireland</div>
+        </div>
+        <p class="project-desc">Alongside my professional work, I've developed a deep interest in genealogy — tracing family lines back through the centuries and piecing together the stories of those who came before. It's a pursuit that rewards patience, curiosity, and a love of detective work.</p>
+        <p class="project-desc">My research focuses on several key surnames spanning Wales, England and Ireland: <strong>Thomas, Evans, Wolley, Griffiths, Kirton, Williams, Waite, Toole</strong> and <strong>O'Toole</strong>. Each branch holds its own surprises, from Welsh farming communities to unexpected migrations across the country.</p>
+        <a href="https://www.ancestry.co.uk/invite-ui/accept?token=fpLuu4S9hKcEdEjZG1A5T44ykseqPBfWOS_BEvgEebQ=" target="_blank" class="project-cta">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          View my tree on Ancestry
+        </a>
+      </div>
+      <div class="reveal">
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-icon">🌳</span>
+            <div>
+              <div class="project-card-title">Family Tree</div>
+              <div class="project-card-sub">Active genealogy research</div>
+            </div>
+          </div>
+          <div class="project-facts">
+            <div class="project-fact"><span class="project-fact-label">Platform</span><span class="project-fact-value">Ancestry.co.uk</span></div>
+            <div class="project-fact"><span class="project-fact-label">Region</span><span class="project-fact-value">Wales, England &amp; Ireland</span></div>
+            <div class="project-fact"><span class="project-fact-label">Status</span><span class="project-fact-value"><span class="status-badge">🔍 Ongoing research</span></span></div>
+            <div class="project-fact"><span class="project-fact-label">View tree</span><span class="project-fact-value"><a href="https://www.ancestry.co.uk/invite-ui/accept?token=fpLuu4S9hKcEdEjZG1A5T44ykseqPBfWOS_BEvgEebQ=" target="_blank">Open on Ancestry</a></span></div>
+          </div>
+          <div class="surnames-block">
+            <div class="surnames-label">Surnames of interest</div>
+            <div class="surnames-tags">
+              <span class="surname-tag">Thomas</span>
+              <span class="surname-tag">Evans</span>
+              <span class="surname-tag">Wolley</span>
+              <span class="surname-tag">Griffiths</span>
+              <span class="surname-tag">Kirton</span>
+              <span class="surname-tag">Williams</span>
+              <span class="surname-tag">Waite</span>
+              <span class="surname-tag">Toole</span>
+              <span class="surname-tag">O'Toole</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label reveal">Contact</div>
+    <div class="contact-inner">
+      <div class="reveal">
+        <h2 class="contact-heading">Let's work<br><em>together</em></h2>
+        <p class="contact-sub">Whether you're looking to scale a brand, improve performance marketing, or explore a new opportunity — I'd love to hear from you.</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/caithomas/" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/caithomas44" target="_blank" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://wa.me/447457416922?text=Help%20my%20business" target="_blank" class="social-icon" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="contact-links reveal">
+        <div class="contact-link-item">
+          <div class="contact-link-label">Email</div>
+          <a href="/cdn-cgi/l/email-protection#fe939f9792be9d9f978a9691939f8dd09d9193" class="contact-link-value"><span class="__cf_email__" data-cfemail="92fff3fbfed2f1f3fbe6fafdfff3e1bcf1fdff">[email&#160;protected]</span></a>
+          <span class="contact-consent">⚠ This email is published for genuine human contact only. It may not be harvested, scraped, or used for unsolicited marketing — including outreach based on "legitimate interest". Any such use is explicitly prohibited under UK GDPR Article 21.</span>
+        </div>
+        <div class="contact-link-item">
+          <div class="contact-link-label">LinkedIn</div>
+          <a href="https://www.linkedin.com/in/caithomas/" target="_blank" class="contact-link-value">linkedin.com/in/caithomas</a>
+        </div>
+        <div class="contact-link-item">
+          <div class="contact-link-label">Instagram</div>
+          <a href="https://www.instagram.com/caithomas44" target="_blank" class="contact-link-value">@caithomas44</a>
+        </div>
+        <div class="contact-link-item">
+          <div class="contact-link-label">Location</div>
+          <span class="contact-link-value" style="cursor:default;">Bath, United Kingdom</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Cai Thomas. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/caithomas/" target="_blank" class="footer-social-link" aria-label="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/caithomas44" target="_blank" class="footer-social-link" aria-label="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+    </div>
+    <p>caithomas.com</p>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Nav scroll border
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Burger menu
+    const burger = document.getElementById('burger');
+    const overlay = document.getElementById('nav-overlay');
+
+    burger.addEventListener('click', () => {
+      const isOpen = burger.classList.toggle('open');
+      overlay.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Client ticker tabs
+    document.querySelectorAll('.ticker-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.ticker-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const group = tab.dataset.group;
+        document.getElementById('ticker-b2b').style.display = group === 'b2b' ? 'block' : 'none';
+        document.getElementById('ticker-b2c').style.display = group === 'b2c' ? 'block' : 'none';
+      });
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        overlay.classList.remove('open');
+        burger.setAttribute('aria-expanded', false);
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsent" class="cookie-overlay">
+    <div class="cookie-modal">
+      <div class="cookie-icon">🍪</div>
+      <h2 class="cookie-title">We value your privacy</h2>
+      <p class="cookie-text">This website uses cookies and analytics to improve your experience and help us understand how visitors interact with our content. By continuing, you consent to our use of cookies and tracking technologies.</p>
+      <div class="cookie-buttons">
+        <button id="cookieAccept" class="cookie-btn cookie-btn-accept">Accept & Continue</button>
+        <button id="cookieReject" class="cookie-btn cookie-btn-reject">Go Back</button>
+      </div>
+      <p class="cookie-footer">Read our <a href="#" class="cookie-link">Privacy Policy</a></p>
+    </div>
+  </div>
+
+  <script>
+    // DataLayer Click Tracking
+    (function() {
+      window.dataLayer = window.dataLayer || [];
+      
+      // Track all button clicks
+      document.addEventListener('click', function(e) {
+        const button = e.target.closest('button, .btn-primary, .btn-ghost, .cookie-btn');
+        
+        if (button) {
+          const buttonText = button.textContent.trim();
+          const buttonClass = button.className;
+          
+          window.dataLayer.push({
+            'event': 'button_click',
+            'button_text': buttonText,
+            'button_class': buttonClass,
+            'button_type': button.tagName.toLowerCase(),
+            'timestamp': new Date().toISOString()
+          });
+        }
+      });
+      
+      // Track all external link clicks
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        
+        if (link && link.href) {
+          const url = new URL(link.href, window.location.href);
+          const isExternal = url.hostname !== window.location.hostname;
+          
+          if (isExternal) {
+            // Extract site name from URL
+            const siteName = url.hostname.replace('www.', '');
+            const linkText = link.textContent.trim() || link.getAttribute('aria-label') || 'No text';
+            
+            window.dataLayer.push({
+              'event': 'external_link_click',
+              'link_url': link.href,
+              'link_domain': url.hostname,
+              'link_site_name': siteName,
+              'link_text': linkText,
+              'link_destination': url.pathname,
+              'timestamp': new Date().toISOString()
+            });
+          } else {
+            // Track internal navigation
+            window.dataLayer.push({
+              'event': 'internal_link_click',
+              'link_url': link.href,
+              'link_text': link.textContent.trim(),
+              'link_section': link.getAttribute('href'),
+              'timestamp': new Date().toISOString()
+            });
+          }
+        }
+      });
+      
+      // Track navigation link clicks specifically
+      document.querySelectorAll('.nav-link, .nav-links a').forEach(function(navLink) {
+        navLink.addEventListener('click', function(e) {
+          window.dataLayer.push({
+            'event': 'navigation_click',
+            'nav_text': this.textContent.trim(),
+            'nav_destination': this.getAttribute('href'),
+            'timestamp': new Date().toISOString()
+          });
+        });
+      });
+      
+      // Track CTA clicks
+      document.querySelectorAll('.btn-primary, .btn-ghost').forEach(function(cta) {
+        cta.addEventListener('click', function(e) {
+          window.dataLayer.push({
+            'event': 'cta_click',
+            'cta_text': this.textContent.trim(),
+            'cta_type': this.classList.contains('btn-primary') ? 'primary' : 'ghost',
+            'cta_destination': this.href || 'no-link',
+            'timestamp': new Date().toISOString()
+          });
+        });
+      });
+      
+    })();
+
+    // Cookie Consent Logic
+    (function() {
+      const cookieBanner = document.getElementById('cookieConsent');
+      const acceptBtn = document.getElementById('cookieAccept');
+      const rejectBtn = document.getElementById('cookieReject');
+      
+      // Check if user has already consented
+      const hasConsented = localStorage.getItem('cookieConsent');
+      
+      if (!hasConsented) {
+        // Show banner on page load
+        setTimeout(() => {
+          cookieBanner.classList.add('show');
+        }, 500);
+      }
+      
+      acceptBtn.addEventListener('click', function() {
+        // Store consent
+        localStorage.setItem('cookieConsent', 'accepted');
+        
+        // Fire GTM dataLayer event
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          'event': 'cookie_consent',
+          'consent_status': 'accepted',
+          'consent_timestamp': new Date().toISOString()
+        });
+        
+        // Hide banner
+        cookieBanner.classList.remove('show');
+        setTimeout(() => {
+          cookieBanner.style.display = 'none';
+        }, 300);
+      });
+      
+      rejectBtn.addEventListener('click', function() {
+        // Go back / close page
+        window.history.back();
+      });
+    })();
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4eb9bb3cc0f956c',t:'MTc5MjcwNDY3OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
