@@ -1,70 +1,67 @@
 /* caithomas.com - loaded with defer, so it runs after the HTML is parsed and never blocks rendering. */
 (function () {
   'use strict';
-
-  // Scroll reveal (content is visible without this; it only adds the fade-in)
-  const reveals = document.querySelectorAll('.reveal');
+  const root = document.documentElement;
   const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveal. Content is visible without this; it only adds the fade-in.
+  const reveals = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window) || reduceMotion) {
     reveals.forEach(el => el.classList.add('visible'));
+  } else {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+    // Safety nets: show anything already in or above the viewport that the observer has not reached.
+    const sweep = setInterval(() => {
+      let pending = 0;
+      reveals.forEach(el => {
+        if (el.classList.contains('visible')) return;
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); else pending++;
+      });
+      if (!pending) clearInterval(sweep);
+    }, 1000);
+    window.addEventListener('scroll', () => {
+      reveals.forEach(el => {
+        if (!el.classList.contains('visible') && el.getBoundingClientRect().bottom < 0) el.classList.add('visible');
+      });
+    }, { passive: true });
   }
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
+
+  // Light and dark: dark unless the visitor chooses light. The choice stays in this browser only.
+  const toggle = document.getElementById('themeToggle');
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const currentTheme = () => (root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+  function applyTheme(theme, save) {
+    root.setAttribute('data-theme', theme);
+    if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#F3F1EB' : '#0A0A09');
+    if (toggle) toggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+    if (save) { try { localStorage.setItem('theme', theme); } catch (e) {} }
+  }
+  applyTheme(currentTheme(), false);
+  if (toggle) toggle.addEventListener('click', () => applyTheme(currentTheme() === 'light' ? 'dark' : 'light', true));
+
+  // Phone and tablet menu
+  const nav = document.getElementById('nav');
+  const menuBtn = document.getElementById('menuToggle');
+  if (nav && menuBtn) {
+    const setMenu = (open) => {
+      nav.classList.toggle('open', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+    menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    nav.querySelectorAll('.nav-link').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  if (('IntersectionObserver' in window) && !reduceMotion) reveals.forEach(el => observer.observe(el));
-  // Safety net: once a second, show anything in or above the viewport that the observer has not reached.
-  const sweep = setInterval(() => {
-    let pending = 0;
-    reveals.forEach(el => {
-      if (el.classList.contains('visible')) return;
-      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); else pending++;
-    });
-    if (!pending) clearInterval(sweep);
-  }, 1000);
-
-  // Nav scroll border
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-    reveals.forEach(el => { if (!el.classList.contains('visible') && el.getBoundingClientRect().bottom < 0) el.classList.add('visible'); });
-  }, { passive: true });
-
-  // Burger menu
-  const burger = document.getElementById('burger');
-  const overlay = document.getElementById('nav-overlay');
-
-  burger.addEventListener('click', () => {
-    const isOpen = burger.classList.toggle('open');
-    overlay.classList.toggle('open', isOpen);
-    burger.setAttribute('aria-expanded', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-
-  // Client ticker tabs
-  document.querySelectorAll('.ticker-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.ticker-tab').forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const group = tab.dataset.group;
-      document.querySelectorAll('.ticker-tab').forEach(t => t.setAttribute('aria-pressed', t === tab ? 'true' : 'false'));
-      document.getElementById('ticker-b2b').style.display = group === 'b2b' ? 'block' : 'none';
-      document.getElementById('ticker-b2c').style.display = group === 'b2c' ? 'block' : 'none';
-    });
-  });
-
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      burger.classList.remove('open');
-      overlay.classList.remove('open');
-      burger.setAttribute('aria-expanded', false);
-      document.body.style.overflow = '';
-    });
-  });
+  }
 })();
 
 // Consent, Google Tag Manager and click events.

@@ -9,21 +9,33 @@ day of the move, kept for comparison only (it is not published).
 
 Edit the files and push to `main`. GitHub Pages republishes within a minute or two.
 
+The design dates from 23 October 2026: dark by default with a light/dark switch, Geist and Geist
+Mono type, one orange accent, a floating pill navigation, a card grid for the headline numbers and
+tools, a client logo wall and numbered sections. It was agreed from a mockup on a private Design
+canvas, https://claude.ai/artifact/7fZAVz12KTuBYQJieuXdhd, which is the reference for the look.
+
 - `index.html` is the whole page. The `<head>` repeats facts from the page for search engines, AI
   assistants and social previews: Open Graph and X tags, and a JSON-LD block (`ProfilePage`,
   `WebSite`, `ImageObject` and a `Person` with the job, employer, Bath, the
   LinkedIn and Instagram profiles, every role in the career timeline as an `EmployeeRole`, and the
   two volunteer roles as `OrganizationRole`s). When the page text changes a role, a date or a
   contact detail, change it there too, and update `dateModified`.
-- Colours: `--accent` (#B84900) is the orange for text and anything behind text, chosen to pass
-  the WCAG AA contrast check on every background the page uses; `--orange` (#F96302) is kept for
-  decoration only. The grey for secondary text, `--ink-soft`, is #666666 (was #999999), which also passes.
-- `style.css` holds all the styling. The responsive rules are at the end of the file (breakpoints
-  at 1100, 960, 900, 600 and 380 px), followed by the `prefers-reduced-motion` block.
+- Colours are tokens at the top of `style.css`: one set for dark (the default) and one under
+  `[data-theme="light"]`. The accent is #FF6A2B in dark and #C2410C in light; `--accent-ink` is a
+  deeper orange for small text on the tinted cards. Every text pair passes WCAG AA in both themes
+  (axe reported no violations on 23 October 2026), so check contrast in both if a colour changes.
+- The light/dark choice is stored in the visitor's browser (`localStorage` key `theme`). A one-line
+  script at the top of the `<head>` applies it before the page paints, so there is no flash; the
+  privacy and 404 pages carry the same line.
+- `style.css` holds all the styling, including the privacy and 404 pages (they link `/style.css`).
+  Breakpoints: 960 px (navigation becomes a menu button), 700 px (cookie bar stacks) and 560 px
+  (phone spacing), then the `prefers-reduced-motion` block.
 - `script.js` is loaded with `defer`, so nothing blocks rendering. It adds the fade-in on scroll,
-  the burger menu, the client-logo tabs, the cookie notice, Google Tag Manager and its click
-  events, and the email link. The page is complete without it: the fade-in only applies when the
-  `js` class is on `<html>`.
+  the light/dark switch, the phone menu (Escape closes it), the cookie notice, Google Tag Manager
+  and its click events, and the email link. The page is complete without it: the fade-in only
+  applies when the `js` class is on `<html>`, and the switch and menu button only show then.
+- Client logos had their white margins trimmed so they read at the same size; keep any new logo
+  tight to its edges.
 - **Consent.** Google Tag Manager is not in the HTML. `script.js` loads it only after the visitor
   presses "Accept all" (or on later visits once they have), with Google Consent Mode defaults set
   to denied before that. "Reject all" stores the refusal, deletes the trackers' first-party
