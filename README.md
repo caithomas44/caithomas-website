@@ -71,6 +71,9 @@ canvas, https://claude.ai/artifact/7fZAVz12KTuBYQJieuXdhd, which is the referenc
   current site first went live, plus `WebSite`, `ImageObject` and `Person`); the privacy page has
   `WebPage` and `BreadcrumbList`. Links to Cai's own LinkedIn and Instagram carry `rel="me"`.
 - `robots` meta allows large image previews and full-length snippets.
+- The FAQ section ("Questions, answered", added 23 October 2026) has matching `FAQPage` structured
+  data. Its answers use only facts from the page and repeat the name instead of pronouns, so AI
+  answer engines can quote them on their own. Keep the visible answers and the JSON-LD identical.
 - `llms.txt` is a plain summary for AI tools, linked from the `<head>`. It repeats facts from the
   page, so update it when roles, results or clients change. It deliberately leaves out the email.
 - IndexNow: `.github/workflows/indexnow.yml` runs after every GitHub Pages build and tells IndexNow
