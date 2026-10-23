@@ -49,7 +49,7 @@ canvas, https://claude.ai/artifact/7fZAVz12KTuBYQJieuXdhd, which is the referenc
 - **Email.** The address is not in the page source. The contact link carries it reversed in two
   data attributes and `script.js` builds the `mailto:` link; with scripts off it reads
   "mail [at] caithomas.com". It is deliberately left out of the structured data.
-- `images/social-share.jpg` (1200×630) is the picture shown when the site is shared on LinkedIn,
+- `images/social-share-2026.jpg` (1200×630) is the picture shown when the site is shared on LinkedIn,
   WhatsApp, Facebook or X. After changing it, re-scrape the page in LinkedIn's Post Inspector and
   Facebook's Sharing Debugger so they stop showing the old one.
 - Client logos live in `images/logos/` (they used to be hot-linked from wearecrank.com).
