@@ -64,6 +64,22 @@ canvas, https://claude.ai/artifact/7fZAVz12KTuBYQJieuXdhd, which is the referenc
   anything needs restoring. `html.async-hide { opacity: 1 !important; }` stays at the end of
   `style.css` as a guard in case an anti-flicker snippet is ever added again.
 
+## SEO and AI search
+
+- The main headline (H1) starts with "Cai Thomas" so search engines and AI tools know whose page it is.
+- Structured data: the home page's JSON-LD (`ProfilePage` with `dateCreated` 2026-02-18, the date the
+  current site first went live, plus `WebSite`, `ImageObject` and `Person`); the privacy page has
+  `WebPage` and `BreadcrumbList`. Links to Cai's own LinkedIn and Instagram carry `rel="me"`.
+- `robots` meta allows large image previews and full-length snippets.
+- `llms.txt` is a plain summary for AI tools, linked from the `<head>`. It repeats facts from the
+  page, so update it when roles, results or clients change. It deliberately leaves out the email.
+- IndexNow: `.github/workflows/indexnow.yml` runs after every GitHub Pages build and tells IndexNow
+  (Bing, which feeds ChatGPT search and Copilot, plus Yandex and others) that the home page,
+  privacy page and `llms.txt` changed. The key file at the site root proves ownership; keep it.
+- `sitemap.xml` lists the home and privacy pages; update `lastmod` when content changes.
+- Google Search Console: domain property `sc-domain:caithomas.com`. Bing Webmaster Tools: verified
+  by the `msvalidate.01` meta tag.
+
 ## Checks before pushing
 
 - Structured data: POST the page to https://validator.schema.org/validate (`html=` form field).

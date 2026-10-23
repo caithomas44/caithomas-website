@@ -63,6 +63,10 @@ a, button { -webkit-tap-highlight-color: transparent; }
 
 .container { max-width: 1280px; margin: 0 auto; padding-inline: var(--gutter); }
 .accent { color: var(--accent); }
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 .muted { color: var(--muted); }
 .label {
   font-family: var(--mono);
@@ -155,6 +159,11 @@ a, button { -webkit-tap-highlight-color: transparent; }
   font-size: clamp(52px, 8.2vw, 128px); line-height: 0.92;
   letter-spacing: -0.05em; font-weight: 600;
   text-wrap: balance;
+}
+.hero-name {
+  display: block; margin-bottom: 18px;
+  font-family: var(--mono); font-size: clamp(14px, 1.2vw, 16px); font-weight: 500;
+  letter-spacing: 0.14em; line-height: 1.2; text-transform: uppercase; color: var(--muted);
 }
 .hero-lead { margin: 0; max-width: 640px; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; color: var(--muted); }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }

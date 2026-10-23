@@ -1,0 +1,26 @@
+# Tells IndexNow (Bing, which feeds ChatGPT search and Copilot, plus Yandex, Seznam and others)
+# that the site changed, every time GitHub Pages finishes publishing a push to main.
+# The key file 832d0147c9213a347a7041bd3d0166b7.txt at the site root proves the site owns the key.
+name: IndexNow
+
+on:
+  page_build:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    if: github.event_name == 'workflow_dispatch' || github.event.build.status == 'built'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for the published files to reach GitHub's CDN
+        run: sleep 60
+      - name: Submit the site's pages to IndexNow
+        run: |
+          code=$(curl -sS -o response.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d '{"host":"www.caithomas.com","key":"832d0147c9213a347a7041bd3d0166b7","keyLocation":"https://www.caithomas.com/832d0147c9213a347a7041bd3d0166b7.txt","urlList":["https://www.caithomas.com/","https://www.caithomas.com/privacy.html","https://www.caithomas.com/llms.txt"]}')
+          echo "IndexNow answered HTTP $code"; cat response.txt
+          case "$code" in 200|202) ;; *) exit 1 ;; esac
