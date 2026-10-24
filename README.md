@@ -19,7 +19,9 @@ canvas, https://claude.ai/artifact/7fZAVz12KTuBYQJieuXdhd, which is the referenc
   `WebSite`, `ImageObject` and a `Person` with the job, employer, Bath, the
   LinkedIn and Instagram profiles, every role in the career timeline as an `EmployeeRole`, and the
   two volunteer roles as `OrganizationRole`s). When the page text changes a role, a date or a
-  contact detail, change it there too, and update `dateModified`.
+  contact detail, change it there too, and update `dateModified`. Dates in the JSON-LD must be full
+  ISO 8601 date-times with a time zone (`2026-10-23T10:04:10+01:00`), not plain dates: Google's
+  Search Console flags a plain date in `dateCreated` or `dateModified` as invalid.
 - Colours are tokens at the top of `style.css`: one set for dark (the default) and one under
   `[data-theme="light"]`. The accent is #FF6A2B in dark and #C2410C in light; `--accent-ink` is a
   deeper orange for small text on the tinted cards. Every text pair passes WCAG AA in both themes
